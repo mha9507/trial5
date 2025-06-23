@@ -528,31 +528,40 @@ setTimeout(() => {
   }
 
   // Typing animation effect
-  const typewriterElements = document.querySelectorAll('.typewriter, .typewriter-multiline');
-  typewriterElements.forEach(el => {
-    // Reset to prepare for animation
+ const typewriterElements = document.querySelectorAll('.typewriter, .typewriter-multiline');
+typewriterElements.forEach(el => {
+  // Reset to prepare for animation
+  if (el.classList.contains('typewriter')) {
+    el.style.width = '0';
+    el.style.whiteSpace = 'nowrap'; // Ensure text stays in one line
+    el.style.display = 'inline-block'; // For smooth width transition
+    el.style.overflow = 'hidden'; // Hide overflow during animation
+  } else if (el.classList.contains('typewriter-multiline')) {
+    el.style.height = '0';
+    el.style.opacity = '0';
+    el.style.overflow = 'hidden'; // Hide overflow during animation
+  }
+  
+  // Trigger animation after delay with smoother transitions
+  const delay = el.style.animationDelay || '0s';
+  setTimeout(() => {
     if (el.classList.contains('typewriter')) {
-      el.style.width = '0';
-    } else if (el.classList.contains('typewriter-multiline')) {
-      el.style.height = '0';
-      el.style.opacity = '0';
-    }
-    
-    // Trigger animation after delay
-    const delay = el.style.animationDelay || '0s';
-    setTimeout(() => {
-      if (el.classList.contains('typewriter')) {
-        el.style.width = 'auto';
+      el.style.transition = 'width 0.7s ease-in-out';
+      el.style.width = `${el.scrollWidth}px`; // Use exact width for smooth animation
+      
+      // Remove cursor after animation completes
+      setTimeout(() => {
         el.style.borderRight = 'none';
-      } else if (el.classList.contains('typewriter-multiline')) {
-        el.style.height = 'auto';
-        el.style.opacity = '1';
-      }
-    }, parseFloat(delay) * 1000 + 3500);
-  });
+      }, 700);
+    } else if (el.classList.contains('typewriter-multiline')) {
+      el.style.transition = 'height 0.8s ease-in-out, opacity 0.6s ease';
+      el.style.height = `${el.scrollHeight}px`;
+      el.style.opacity = '1';
+    }
+  }, parseFloat(delay) * 1000 + 1500); // Reduced initial delay from 3500ms to 1500ms for quicker start
 });
 
-// Initialize game
+// Keep all game initialization code exactly as is below
 let currentObject = 'coin';
 resetObject();
 resetFly();
@@ -562,7 +571,7 @@ startBtn.addEventListener('click', () => {
   mainMenu.style.display = 'none';
   background.classList.remove('blur');
   scoreDisplay.style.display = 'block';
-  nameDisplay.style.display = 'block'; // Show name display
+  nameDisplay.style.display = 'block';
   gameRunning = true;
   playMusic();
   gameLoop();
@@ -572,6 +581,6 @@ restartBtn.addEventListener('click', () => {
   gameOverOverlay.classList.remove('visible');
   background.classList.remove('blur');
   scoreDisplay.style.display = 'block';
-  nameDisplay.style.display = 'block'; // Show name display on restart
+  nameDisplay.style.display = 'block';
   restartGame();
 });
