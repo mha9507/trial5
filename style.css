@@ -891,9 +891,6 @@ html, body {
 
 
 
-
-
-
 /* ===== COMPLETE MOBILE CSS (PHONES) ===== */
 @media (max-width: 768px) {
   /* 1. LARGER MENU BUTTONS */
@@ -920,10 +917,10 @@ html, body {
     gap: 20px;
   }
 
-  /* Loading text adjustments */
+  /* Instructions text adjustments */
   #instructions h1 {
     font-size: 1.1rem !important;
-    margin: 0 0 18px 0 !important;
+    margin: 0 0 12px 0 !important;
     line-height: 1.3;
     padding: 0 5px;
   }
@@ -938,8 +935,31 @@ html, body {
   }
 
   #instructions ul li {
-    margin-bottom: 10px;
-    font-size: 13px;
+    margin-bottom: 8px !important;
+    font-size: 12px !important;
+    white-space: normal !important;
+    display: block !important;
+    text-align: left;
+    padding-left: 10px;
+  }
+
+  #instructions ul li img {
+    margin: 0 4px !important;
+    vertical-align: middle;
+  }
+
+  .instruction-icon {
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  .fly-icon {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  #instructions ul li span.space-or-tap {
+    white-space: normal !important;
   }
 
   /* Game elements - make contact runner match index runner */
@@ -1054,6 +1074,20 @@ html, body {
 
   #instructions h1 {
     font-size: 1rem !important;
+  }
+
+  #instructions ul li {
+    font-size: 11px !important;
+  }
+
+  .instruction-icon {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .fly-icon {
+    width: 45px !important;
+    height: 45px !important;
   }
 
   /* About me page ultra-compact */
