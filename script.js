@@ -437,36 +437,13 @@ document.addEventListener('DOMContentLoaded', function() {
       runner.style.transition = 'opacity 0.5s ease';
     }
   });
-
-  prompts.forEach(prompt => {
-    if (prompt) {
-      prompt.style.opacity = '0';
-      prompt.style.display = 'block';
-    }
+// Show runner after 1.5 seconds with fade-in effect (keep this)
+setTimeout(() => {
+  runners.forEach(runner => {
+    if (runner) runner.style.opacity = '1';
   });
-
-  // Show both elements after 1.5 seconds with fade-in effect
-  setTimeout(() => {
-    runners.forEach(runner => {
-      if (runner) runner.style.opacity = '1';
-    });
-    prompts.forEach(prompt => {
-      if (prompt) prompt.style.opacity = '1';
-    });
-    
-    // Hide prompts after 5 seconds
-    setTimeout(() => {
-      prompts.forEach(prompt => {
-        if (prompt) {
-          prompt.style.opacity = '0';
-          setTimeout(() => {
-            prompt.style.display = 'none';
-          }, 500);
-        }
-      });
-    }, 5000);
-  }, 2800);
-
+}, 2800);
+  
   // Set up click handlers for both runners
   runners.forEach(runner => {
     if (runner) {
