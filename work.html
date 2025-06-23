@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>My Work - 5 Project Scroller</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="work.css">
+
+</head>
+<body>
+  <!-- Background elements with blur capability -->
+  <div id="background" class="blur">
+    <div id="foreground"></div>
+  </div>
+
+  <nav id="pixel-menu">
+    <a href="index.html"><img src="media/home.png" alt="Home"></a>
+    <a href="me.html"><img src="media/me.png" alt="About Me"></a>
+    <a href="work.html"><img src="media/work.png" alt="My Work"></a>
+    <a href="contact.html"><img src="media/contact.png" alt="Contact"></a>
+  </nav>
+
+  <!-- Navigation arrows with continuously playing GIFs -->
+  <button class="nav-arrow left" id="arrowLeft">
+    <object type="image/gif" data="media/left.gif" id="leftGif">
+      <span class="fallback-arrow">←</span>
+    </object>
+  </button>
+  <button class="nav-arrow right" id="arrowRight">
+    <object type="image/gif" data="media/right.gif" id="rightGif">
+      <span class="fallback-arrow">→</span>
+    </object>
+  </button>
+
+  <div class="scrolling-container" id="scroller">
+    <!-- Projects container with exactly 5 projects -->
+    <div class="projects-wrapper">
+      <!-- Project 1 -->
+      <!-- Project 1 -->
+      <div class="project-section">
+        <div class="project-card">
+          <div class="image-container">
+            <a href="https://mha9507.github.io/IM-Assignment-1/" target="_blank">
+              <img src="media/proj1.png" alt="With Every Stroke, a Story" style="max-width: 70%; border-radius: 8px; border: 2px solid #5a2a83;">
+              
+            </a>
+          </div>
+          <h2>With Every Stroke, a Story</h2>
+          <p>A digital art portfolio blending storytelling with visual expression.</p>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-section">
+        <div class="project-card">
+          <div class="image-container">
+            <a href="https://evva5667.github.io/Do-Your-Chores-First-/#" target="_blank">
+              <img src="media/proj2.png" alt="With Every Stroke, a Story" style="max-width: 70%; border-radius: 8px; border: 2px solid #5a2a83;">
+            </a>
+          </div>
+          <h2>Do Your Chores!</h2>
+          <p>A group-made interactive comic where a boy completes chores for grandma's Wi-Fi, encountering a key decision that shapes the story.</p>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-section">
+        <div class="project-card">
+          <div class="image-container">
+            <a href="https://mha9507.github.io/Assignment-3/index.html" target="_blank">
+              <img src="media/proj3.png" alt="Through the Eyes of Then" style="max-width: 70%; border-radius: 8px; border: 2px solid #5a2a83;">
+            </a>
+          </div>
+          <h2>Through the Eyes of Then</h2>
+          <p>A nostalgic group project that brings to life the chaotic school mornings of a 2000s kid — featuring interactive audio and a playful decision.</p>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-section">
+        <div class="project-card">
+          <div class="image-container">
+            <a href="https://mha9507.github.io/Assignment-4/" target="_blank">
+              <img src="media/proj4.png" alt="Teleport Through Sight" style="max-width: 70%; border-radius: 8px; border: 2px solid #5a2a83;">
+            </a>
+          </div>
+          <h2>Teleport Through Sight</h2>
+          <p>A group-created interactive video where a student tests teleportation glasses, uncovering eerie secrets. Features two pivotal choices and immersive 3D interactivity.</p>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="project-section">
+        <div class="project-card">
+          <div class="image-container">
+            <a href="https://mha9507.github.io/Loading-Meera/" target="_blank">
+              <img src="media/proj5.png" alt="Loading...Meera" style="max-width: 70%; border-radius: 8px; border: 2px solid #5a2a83;">
+            </a>
+          </div>
+          <h2>Loading...Meera</h2>
+          <p>An interactive portfolio website featuring a Mario-inspired mini-game where players collect coins to reveal fun facts about me, followed by a showcase of my work.</p>
+        </div>
+      </div>
+    
+    <!-- Runner character -->
+    <img src="media/run.gif" class="runner" id="runner" alt="Running character">
+  </div>
+
+<script src="work.js"></script>
+</body>
+</html>
