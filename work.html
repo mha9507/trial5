@@ -60,9 +60,9 @@ body {
   transform: translateX(-50%);
   z-index: 20000;
   display: flex;
-  gap: 15px; /* Reduced from 30px to match index.html */
+  gap: 30px;
   align-items: center;
-  padding: 0 20px; /* Changed from 2px 50px to match index.html */
+  padding: 2px 50px;
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 12px;
   backdrop-filter: blur(6px);
@@ -74,7 +74,6 @@ body {
   image-rendering: pixelated;
   cursor: pointer;
   transition: transform 0.2s ease;
-  margin: 0 -8px; /* Added to match index.html */
 }
 
 #pixel-menu img:hover {
@@ -84,7 +83,7 @@ body {
 .scrolling-container {
   width: 100vw;
   height: 100vh;
-  padding-top: 90px; /* Increased from 70px to reduce space */
+  padding-top: 70px;
   overflow-x: auto;
   overflow-y: hidden;
   position: relative;
@@ -109,7 +108,7 @@ body {
   align-items: center;
   position: relative;
   scroll-snap-align: start;
-  padding: 20px 20px; /* Reduced top padding */
+  padding: 30px 20px;
 }
 
 .project-card {
@@ -127,7 +126,7 @@ body {
   z-index: 10;
   display: flex;
   flex-direction: column;
-  margin-top: 0; /* Removed margin-top */
+  margin-top: 20px;
 }
 
 .project-card .image-container {
@@ -281,7 +280,6 @@ body {
   50% { border-color: #5a2a83; }
 }
 
-
 /* Responsive adjustments */
 @media (max-width: 1000px) {
   .runner {
@@ -325,7 +323,7 @@ body {
 
 @media (max-width: 768px) {
   .scrolling-container {
-    padding-top: 90px;
+    padding-top: 90px; /* Reduced from 70px to match index.html */
   }
 
   .project-card h2 {
@@ -345,24 +343,23 @@ body {
     max-width: 88%;
   }
 
-  /* Menu adjustments to match index.html exactly */
+  /* Menu adjustments to match index.html */
   #pixel-menu {
     height: 90px;
-    padding: 0 10px; /* Match index.html mobile padding */
-    gap: 10px; /* Keep tighter gap for mobile but will be overridden below */
+    padding: 0 10px;
   }
   
   #pixel-menu img {
     height: 85px !important;
     width: auto;
     image-rendering: pixelated;
-    margin: 0 -8px; /* Match index.html margin for mobile */
+    margin: 0 -8px;
   }
 }
 
 @media (max-width: 600px) {
   .scrolling-container {
-    padding-top: 90px !important;
+    padding-top: 90px !important; /* Matched to index.html */
     height: calc(100vh - 90px);
   }
 
@@ -377,11 +374,11 @@ body {
     left: 40px;
   }
 
-  /* Project card styling */
+  /* Project card styling - unchanged except for menu spacing */
   .project-card {
     padding: 18px;
     min-height: 68vh !important;
-    margin-top: 0;
+    margin-top: 10px;
     width: 96%;
     justify-content: space-between;
   }
@@ -423,28 +420,27 @@ body {
 }
 
 @media (max-width: 450px) {
-  /* Runner positioning */
+  /* Runner positioning - unchanged */
   .runner {
     width: 180px;
     bottom: 22vh;
     left: 20px;
   }
   
-  /* Pixel menu adjustments to match index.html exactly */
+  /* Pixel menu adjustments to match index.html */
   #pixel-menu {
-    gap: 8px;
-    padding: 0 8px;
+    gap: 10px;
+    padding: 0 10px;
     height: 90px;
   }
   
   #pixel-menu img {
     height: 75px !important;
-    margin: 0 -6px;
   }
   
   /* Main container adjustments */
   .scrolling-container {
-    padding-top: 90px;
+    padding-top: 90px; /* Matched to index.html */
     height: calc(100vh - 90px);
   }
 
@@ -456,7 +452,7 @@ body {
   .project-card {
     padding: 15px;
     min-height: 65vh !important;
-    margin-top: 0;
+    margin-top: 8px;
     width: 94%;
   }
   
@@ -531,6 +527,7 @@ body {
     }
   }
 }
+
   </style>
 </head>
 <body>
