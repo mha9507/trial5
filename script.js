@@ -423,7 +423,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Get both runner elements
   const runners = [document.getElementById('about-me-runner'), document.getElementById('about-me-runner-mobile')];
-  const prompts = [document.getElementById('monster-prompt'), document.getElementById('monster-prompt-mobile')];
+
 
 
   // Add this to your existing DOMContentLoaded event listener
